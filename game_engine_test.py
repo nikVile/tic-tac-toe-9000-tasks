@@ -60,12 +60,29 @@ def test_scenario():
         winner_id=""
     )
 
-    game.do_turn(
+    assert game.do_turn(
         TicTacToeTurn(
             player_id="Petya",
             x_coordinate=0,
             y_coordinate=0
         )
+    ) == TicTacToeGameInfo(
+        game_id="0001",
+        field=[
+            ["X", " ", " "],
+            [" ", " ", " "],
+            [" ", " ", " "]
+        ],
+        sequence_of_turns=[
+            TicTacToeTurn(
+                player_id="Petya",
+                x_coordinate=0,
+                y_coordinate=0
+            )
+        ],
+        first_player_id="Petya",
+        second_player_id="Vasya",
+        winner_id=""
     )
 
     assert game.get_game_info() == TicTacToeGameInfo(
