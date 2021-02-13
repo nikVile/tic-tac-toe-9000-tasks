@@ -2,9 +2,9 @@ from typing import Dict
 
 from game_engine import TicTacToeGame, TicTacToeGameInfo, TicTacToeTurn
 from .user_info import UserInfo
-from .abstract_app import AbstractTicTacToeApp
 
-class TicTacToeApp(AbstractTicTacToeApp):
+
+class TicTacToeApp:
     def __init__(self):
         """пока не знаю, мб что-то ещё тут будет :)
         в обоих случаях айдишник - ключ, значение - угадайте, что)"""
